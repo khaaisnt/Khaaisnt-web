@@ -15,3 +15,11 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+/* .hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-secondary-gray;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45 translate-y-1.5;
+} */
