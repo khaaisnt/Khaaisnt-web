@@ -5,9 +5,7 @@ export default function Projects() {
   return (
     <>
       <div className="grid grid-rows-1">
-        <div>
-            
-        </div>
+        <div></div>
       </div>
     </>
   );

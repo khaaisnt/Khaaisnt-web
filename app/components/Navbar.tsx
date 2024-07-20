@@ -1,11 +1,26 @@
 import React from "react";
 import Image from "next/image";
 import "../globals.css";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Navbar() {
+  useEffect(() => {
+    AOS.init({
+      disable: "phone",
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   return (
     <>
-      <nav className="fixed px-[20px] lg:px-[130px] py-[25px] w-full bg-primary-black">
+      <nav
+        className="fixed px-[20px] lg:px-[130px] py-[25px] w-full bg-primary-black"
+        data-aos="fade-down"
+        data-aos-delay="300"
+      >
         <div className="flex justify-between">
           <div className="text-secondary-gray font-bold text-[25px]">
             Khaaisnt.

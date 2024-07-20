@@ -1,8 +1,22 @@
 import React from "react";
 import Image from "next/image";
 import Memoji from "/public/memoji.png";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutMe() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      AOS.init({
+        once: true,
+        disable: "phone",
+        duration: 700,
+        easing: "ease-out-cubic",
+      });
+    }
+  }, []);
+
   return (
     <>
       <div className="w-full pt-[150px] lg:pt-[180px] px-[20px] lg:px-[130px]">
