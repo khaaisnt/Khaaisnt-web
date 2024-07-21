@@ -25,7 +25,7 @@ export default function Projects() {
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-          <div className="bg-slate-400 lg:w-[600px] lg:h-[380px] aspect-[16/9] rounded-[18px] overflow-hidden relative transition-all duration-500 group">
+          <div className="bg-slate-400 lg:w-[600px] lg:h-[375px] aspect-[16/9] rounded-[18px] overflow-hidden relative transition-all duration-500 group">
             <a
               href=""
               className="bg-cover w-full h-full bg-center absolute group-hover:scale-110 duration-500 transition-all"
@@ -33,7 +33,7 @@ export default function Projects() {
               <Image src={LansiCare} alt="LansiCare" />
             </a>
           </div>
-          <div className="bg-slate-400 lg:w-[600px] lg:h-[380px] aspect-[16/9] rounded-[18px] overflow-hidden relative transition-all duration-500 group">
+          <div className="bg-slate-400 lg:w-[600px] lg:h-[375px] aspect-[16/9] rounded-[18px] overflow-hidden relative transition-all duration-500 group">
             <a
               href=""
               className=" bg-cover w-full h-full bg-center absolute group-hover:scale-110 duration-500 transition-all"
