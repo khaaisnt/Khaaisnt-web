@@ -1,9 +1,24 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import "../globals.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+interface NavbarProps {
+  title: string;
+  href: string;
+}
+
+const link: NavbarProps[] = [
+  { title: "About", href: "#about" },
+  { title: "Projects", href: "#projects" },
+  {
+    title: "Resume",
+    href: "https://drive.google.com/file/d/1bCmNXz3BLKjUre8D8U-buN6nuyWwa46B/view?usp=sharing",
+  },
+];
 
 export default function Navbar() {
   useEffect(() => {
@@ -51,10 +66,11 @@ export default function Navbar() {
               Projects
             </a>
             <a
-              href=""
+              href="https://drive.google.com/file/d/1bCmNXz3BLKjUre8D8U-buN6nuyWwa46B/view?usp=sharing"
               className="text-secondary-gray hover:text-white duration-200"
+              target="_blank"
             >
-              Resume
+              Resume📄
             </a>
           </div>
         </div>

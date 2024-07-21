@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Memoji from "/public/memoji.png";
+import MemojiEye from "/public/MemojiEye.png";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -22,8 +23,16 @@ export default function AboutMe() {
       <div
         className="w-full pt-[150px] lg:pt-[180px] px-[20px] lg:px-[130px]"
         data-aos="fade-up"
+        id="about"
       >
-        <Image src={Memoji} alt="memoji" className="w-[200px]" />
+        <div className="group">
+          <div className="block group-hover:hidden">
+            <Image src={Memoji} alt="memoji" className="w-[200px]" />
+          </div>
+          <div className="hidden group-hover:block">
+            <Image src={MemojiEye} alt="memoji" className="w-[200px]" />
+          </div>
+        </div>
         <div>
           <h1 className="font-semibold lg:mb-0 mb-[10px] text-[40px] lg:text-[100px] text-white">
             Hey, I{"'"}m Rakha.
