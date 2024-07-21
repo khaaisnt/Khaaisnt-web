@@ -16,11 +16,7 @@ export default function Footer() {
 
   return (
     <>
-      <div
-        className="px-[20px] lg:px-[130px] pb-[20px]"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
+      <div className="px-[20px] lg:px-[130px] pb-[20px]">
         <p className="text-dark-gray text-[14px]">
           Get in touch{" "}
           <span className="text-blue-400 hover:underline">

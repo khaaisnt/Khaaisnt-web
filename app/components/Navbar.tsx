@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed px-[20px] lg:px-[130px] py-[25px] w-full bg-primary-black"
+        className="fixed z-20 px-[20px] lg:px-[130px] py-[25px] w-full bg-primary-black"
         data-aos="fade-down"
         data-aos-delay="300"
       >

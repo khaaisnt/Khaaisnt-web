@@ -19,7 +19,10 @@ export default function AboutMe() {
 
   return (
     <>
-      <div className="w-full pt-[150px] lg:pt-[180px] px-[20px] lg:px-[130px]">
+      <div
+        className="w-full pt-[150px] lg:pt-[180px] px-[20px] lg:px-[130px]"
+        data-aos="fade-up"
+      >
         <Image src={Memoji} alt="memoji" className="w-[200px]" />
         <div>
           <h1 className="font-semibold lg:mb-0 mb-[10px] text-[40px] lg:text-[100px] text-white">
