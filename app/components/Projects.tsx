@@ -25,20 +25,40 @@ export default function Projects() {
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-          <div className="bg-slate-400 lg:w-[600px] lg:h-[375px] aspect-[16/9] rounded-[18px] overflow-hidden relative transition-all duration-500 group">
+          <div className="lg:w-[700px] lg:h-[430px] aspect-[16/9] rounded-[18px] overflow-hidden relative transition-all duration-500 group">
             <a
               href=""
               className="bg-cover w-full h-full bg-center absolute group-hover:scale-110 duration-500 transition-all"
             >
               <Image src={LansiCare} alt="LansiCare" />
             </a>
+            <a href="">
+              <div className="group absolute w-full h-full hover:bg-black hover:bg-opacity-50 flex items-center justify-center gap-[20px]">
+                <div className="text-white text-[24px] font-bold hidden group-hover:block">
+                  LansiCare
+                </div>
+                <div className="text-white text-[14px] hidden group-hover:block hover:underline">
+                  View Project
+                </div>
+              </div>
+            </a>
           </div>
-          <div className="bg-slate-400 lg:w-[600px] lg:h-[375px] aspect-[16/9] rounded-[18px] overflow-hidden relative transition-all duration-500 group">
+          <div className="lg:w-[700px] lg:h-[430px] aspect-[16/9] rounded-[18px] overflow-hidden relative transition-all duration-500 group">
             <a
               href=""
-              className=" bg-cover w-full h-full bg-center absolute group-hover:scale-110 duration-500 transition-all"
+              className="bg-cover w-full h-full bg-center absolute group-hover:scale-110 duration-500 transition-all"
             >
               <Image src={LansiCare} alt="LansiCare" />
+            </a>
+            <a href="">
+              <div className="group absolute w-full h-full hover:bg-black hover:bg-opacity-50 flex items-center justify-center gap-[20px]">
+                <div className="text-white text-[24px] font-bold hidden group-hover:block">
+                  LansiCare
+                </div>
+                <div className="text-white text-[14px] hidden group-hover:block hover:underline">
+                  View Project
+                </div>
+              </div>
             </a>
           </div>
         </div>
