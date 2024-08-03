@@ -68,11 +68,11 @@ export default function AboutMe() {
               Instagram
             </a>
             <a
-              href="https://open.spotify.com/user/gc39l2ei4wr37q66svtik12zy?si=287c44fd68ed4419"
+              href="https://github.com/khakhaaa"
               className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
               target="_blank"
             >
-              Spotify
+              GitHub
             </a>
           </div>
         </div>
