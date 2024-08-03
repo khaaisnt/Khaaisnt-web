@@ -98,6 +98,7 @@ const Navbar: React.FC = () => {
           margin: 5px auto;
           background-color: #fff;
           transition: all 0.3s ease-in-out;
+          radius: 15px;
         }
         #hamburger.open .hamburger-line:nth-child(1) {
           transform: translateY(7px) rotate(45deg);
