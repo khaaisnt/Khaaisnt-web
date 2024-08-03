@@ -1,33 +1,35 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import "../globals.css";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "../globals.css";
 
 interface NavbarProps {
   title: string;
   href: string;
 }
 
-const link: NavbarProps[] = [
+const links: NavbarProps[] = [
   { title: "About", href: "#about" },
   { title: "Projects", href: "#projects" },
   {
-    title: "Resume",
+    title: "Resume 📄",
     href: "https://drive.google.com/file/d/1bCmNXz3BLKjUre8D8U-buN6nuyWwa46B/view?usp=sharing",
   },
 ];
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     AOS.init({
-      disable: "phone",
       duration: 700,
       easing: "ease-out-cubic",
     });
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <>
@@ -36,7 +38,7 @@ export default function Navbar() {
         data-aos="fade-down"
         data-aos-delay="300"
       >
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <div className="text-secondary-gray font-bold text-[25px]">
             Khaaisnt.
           </div>
@@ -45,36 +47,70 @@ export default function Navbar() {
               id="hamburger"
               name="hamburger"
               type="button"
-              className="block absolute right-4"
+              className={`block relative z-30 ${isMenuOpen ? "open" : ""}`}
+              onClick={toggleMenu}
             >
               <span className="hamburger-line"></span>
               <span className="hamburger-line"></span>
               <span className="hamburger-line"></span>
             </button>
           </div>
-          <div className="font-medium hidden lg:block">
-            <a
-              href="#about"
-              className="text-secondary-gray hover:text-white duration-200"
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              className="mx-[18px] text-secondary-gray hover:text-white duration-200"
-            >
-              Projects
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1bCmNXz3BLKjUre8D8U-buN6nuyWwa46B/view?usp=sharing"
-              className="text-secondary-gray hover:text-white duration-200"
-              target="_blank"
-            >
-              Resume📄
-            </a>
+          <div className="font-medium hidden lg:flex">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="mx-[12px] text-[18px] text-secondary-gray hover:text-white duration-200"
+                target={link.href.startsWith("http") ? "_blank" : "_self"}
+              >
+                {link.title}
+              </a>
+            ))}
           </div>
         </div>
+        {isMenuOpen && (
+          <div
+            className="lg:hidden absolute top-full left-0 w-full bg-primary-black transition-transform duration-300 ease-in-out"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div className="flex flex-col items-center justify-center py-4">
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-[16px] text-secondary-gray font-medium hover:text-white duration-200 mb-4"
+                  onClick={toggleMenu}
+                  target={link.href.startsWith("http") ? "_blank" : "_self"}
+                >
+                  {link.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
+      <style jsx>{`
+        .hamburger-line {
+          display: block;
+          width: 25px;
+          height: 2px;
+          margin: 5px auto;
+          background-color: #fff;
+          transition: all 0.3s ease-in-out;
+        }
+        #hamburger.open .hamburger-line:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+        #hamburger.open .hamburger-line:nth-child(2) {
+          opacity: 0;
+        }
+        #hamburger.open .hamburger-line:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      `}</style>
     </>
   );
-}
+};
+
+export default Navbar;

@@ -11,7 +11,6 @@ export default function AboutMe() {
     if (typeof window !== "undefined") {
       AOS.init({
         once: true,
-        disable: "phone",
         duration: 700,
         easing: "ease-out-cubic",
       });
@@ -49,28 +48,28 @@ export default function AboutMe() {
           <div className="flex gap-x-5 mt-[20px]">
             <a
               href="mailto:rakhaadrian23@gmail.com"
-              className="text-white text-[17px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
+              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
               target="_blank"
             >
               Email
             </a>
             <a
               href="https://www.linkedin.com/in/rakha-adrian-nur-tanaya/"
-              className="text-white text-[17px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
+              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
               target="_blank"
             >
               LinkedIn
             </a>
             <a
               href="https://www.instagram.com/khaadriann/"
-              className="text-white text-[17px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
+              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
               target="_blank"
             >
               Instagram
             </a>
             <a
               href="https://open.spotify.com/user/gc39l2ei4wr37q66svtik12zy?si=287c44fd68ed4419"
-              className="text-white text-[17px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
+              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
               target="_blank"
             >
               Spotify

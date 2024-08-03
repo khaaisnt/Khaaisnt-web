@@ -9,7 +9,6 @@ export default function Footer() {
     if (typeof window !== "undefined") {
       AOS.init({
         once: true,
-        disable: "phone",
         duration: 700,
       });
     }
@@ -47,9 +46,7 @@ export default function Footer() {
         <p className="text-dark-gray text-[14px] my-[5px]">
           Made by Rakha Adrian.
         </p>
-        <p className="text-dark-gray text-[14px]">
-          Last Updated: July 20, 2024
-        </p>
+        <p className="text-dark-gray text-[14px]">Last Updated: Aug 3, 2024</p>
       </div>
     </>
   );
