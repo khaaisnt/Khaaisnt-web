@@ -13,7 +13,7 @@ const links: NavbarProps[] = [
   { title: "Projects", href: "#projects" },
   {
     title: "Resume 📄",
-    href: "https://drive.google.com/file/d/1bCmNXz3BLKjUre8D8U-buN6nuyWwa46B/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1HOMGfp0K8fCctHRweMGdXtCqstm3WdVQ/view?usp=sharing",
   },
 ];
 
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="mx-[12px] text-[18px] text-secondary-gray hover:text-white duration-200"
+                className="mx-[12px] text-[16px] text-secondary-gray hover:text-white duration-200"
                 target={link.href.startsWith("http") ? "_blank" : "_self"}
               >
                 {link.title}
