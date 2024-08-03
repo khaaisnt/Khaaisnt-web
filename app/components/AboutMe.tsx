@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Memoji from "/public/memoji.png";
-import MemojiEye from "/public/MemojiEye.png";
+import Memoji from "@/public/Memoji.png";
+import MemojiEye from "@/public/MemojiEye.png";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
