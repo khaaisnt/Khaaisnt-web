@@ -26,4 +26,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Hide the scrollbar */
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
