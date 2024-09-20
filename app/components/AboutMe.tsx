@@ -68,7 +68,7 @@ export default function AboutMe() {
               Instagram
             </a>
             <a
-              href="https://github.com/khakhaaa"
+              href="https://github.com/khaaisnt"
               className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
               target="_blank"
             >
