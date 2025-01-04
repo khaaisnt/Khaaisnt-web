@@ -4,6 +4,7 @@ import LansiCare from "/public/LansiCareSection.png";
 import Wastain from "/public/WastainSection.png";
 import Pilketos from "/public/E-Pilketos.png";
 import ComingSoon from "/public/ComingSoon.jpg";
+import Beloved from "/public/BelovedOna.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -122,24 +123,24 @@ export default function Projects() {
           data-aos-delay="400"
         >
           <a
-            href="https://chillestmonkey.com/"
+            href="https://beloved-ona.vercel.app/"
             target="_blank"
             className="bg-cover w-full h-full bg-center absolute group-hover:scale-110 duration-500 transition-all"
           >
             <Image
-              src={ComingSoon}
-              alt="Coming Soon"
+              src={Beloved}
+              alt="Beloved Ona"
               layout="fill"
               objectFit="cover"
             />
           </a>
-          <a href="https://chillestmonkey.com/" target="_blank">
+          <a href="https://beloved-ona.vercel.app/" target="_blank">
             <div className="group absolute w-full h-full hover:bg-black hover:bg-opacity-50 flex items-center justify-center gap-[20px]">
               <div className="text-white text-[24px] font-bold hidden group-hover:block">
-                Coming Soon
+                Netflix Clone Love
               </div>
               <div className="text-white text-[14px] hidden group-hover:block hover:underline">
-                Just Wait
+                View Project
               </div>
             </div>
           </a>

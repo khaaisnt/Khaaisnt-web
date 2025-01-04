@@ -61,7 +61,7 @@ export default function AboutMe() {
               LinkedIn
             </a>
             <a
-              href="https://www.instagram.com/khaadriann/"
+              href="https://www.instagram.com/thokhans/"
               className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
               target="_blank"
             >

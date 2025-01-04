@@ -12,8 +12,8 @@ const links: NavbarProps[] = [
   { title: "About", href: "#about" },
   { title: "Projects", href: "#projects" },
   {
-    title: "Resume 📄",
-    href: "https://drive.google.com/file/d/1HOMGfp0K8fCctHRweMGdXtCqstm3WdVQ/view?usp=sharing",
+    title: "My CV 📄",
+    href: "https://drive.google.com/file/d/1cof0xBp9Daw97RzUfhD5XIXied0R41li/view?usp=sharing",
   },
 ];
 

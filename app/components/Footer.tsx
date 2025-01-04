@@ -46,7 +46,7 @@ export default function Footer() {
         <p className="text-dark-gray text-[14px] my-[5px]">
           Made by Rakha Adrian.
         </p>
-        <p className="text-dark-gray text-[14px]">Last Updated: Aug 3, 2024</p>
+        <p className="text-dark-gray text-[14px]">Last Updated: Jan 4, 2025</p>
       </div>
     </>
   );
