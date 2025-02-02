@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Khaaisnt - Frontend Developer",
+  title: "Khaaisnt",
   description: "Rakha Adrian Personal Website Made with Next.js",
 };
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" scroll-smooth>
-      <body className={`${inter.className} bg-primary-black container`}>{children}</body>
+      <body className={`${inter.className} bg-primary-black mx-auto container`}>{children}</body>
     </html>
   );
 }
