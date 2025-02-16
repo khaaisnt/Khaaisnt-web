@@ -48,28 +48,28 @@ export default function AboutMe() {
           <div className="flex gap-x-5 mt-[20px]">
             <a
               href="mailto:rakhaadrian23@gmail.com"
-              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
+              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-600 duration-200"
               target="_blank"
             >
               Email
             </a>
             <a
               href="https://www.linkedin.com/in/rakha-adrian-nur-tanaya/"
-              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
+              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-600 duration-200"
               target="_blank"
             >
               LinkedIn
             </a>
             <a
               href="https://www.instagram.com/thokhans/"
-              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
+              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-600 duration-200"
               target="_blank"
             >
               Instagram
             </a>
             <a
               href="https://github.com/khaaisnt"
-              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-400 duration-200"
+              className="text-white text-[20px] font-medium lg:text-[20px] hover:underline hover:text-blue-600 duration-200"
               target="_blank"
             >
               GitHub

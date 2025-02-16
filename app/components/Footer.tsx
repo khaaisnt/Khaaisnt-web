@@ -39,14 +39,14 @@ export default function Footer() {
             </svg>{" "}
             {""}
           </span>
-          <span className="text-blue-400 hover:underline">
+          <span className="text-blue-600 transition-all hover:underline">
             <a href="mailto:rakhaadrian23@gmail.com">rakhaadrian23@gmail.com</a>
           </span>{" "}
         </p>
         <p className="text-dark-gray text-[14px] my-[5px]">
           Made by Rakha Adrian.
         </p>
-        <p className="text-dark-gray text-[14px]">Last Updated: Feb 2, 2025</p>
+        <p className="text-dark-gray text-[14px]">Last Updated: Feb 16, 2025</p>
       </div>
     </>
   );
