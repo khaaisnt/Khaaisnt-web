@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import LansiCare from "/public/LansiCareSection.png";
 import Wastain from "/public/WastainSection.png";
 import Pilketos from "/public/E-Pilketos.png";
@@ -10,7 +10,24 @@ import { X } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const allProjectData = [
+interface Project {
+  title: string;
+  image: StaticImageData;
+  url: string;
+}
+
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+  isModal?: boolean;
+}
+
+interface ProjectModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const allProjectData: Project[] = [
   {
     title: "LansiCare",
     image: LansiCare,
@@ -43,7 +60,7 @@ const allProjectData = [
   },
 ];
 
-const ProjectCard = ({ project, index, isModal = false }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isModal = false }) => (
   <div
     className={`w-full aspect-[16/9] rounded-[20px] overflow-hidden relative group ${
       !isModal ? "data-aos='zoom-in'" : ""
@@ -75,7 +92,7 @@ const ProjectCard = ({ project, index, isModal = false }) => (
   </div>
 );
 
-const ProjectModal = ({ isOpen, onClose }) => {
+const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
@@ -107,8 +124,8 @@ const ProjectModal = ({ isOpen, onClose }) => {
   );
 };
 
-export default function Projects() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const Projects: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -141,4 +158,6 @@ export default function Projects() {
       <ProjectModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
-}
+};
+
+export default Projects;
