@@ -6,6 +6,5 @@ export interface ProjectDetail {
     role: string;
     tools: string[];
     duration: string;
-    image: StaticImageData;
     url: string;
   }
