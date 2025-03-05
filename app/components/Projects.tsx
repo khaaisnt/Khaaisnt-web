@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import LansiCare from "/public/LansiCareSection.png";
 import Wastain from "/public/WastainSection.png";
 import Pilketos from "/public/E-Pilketos.png";
@@ -61,15 +62,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   isModal = false,
 }) => (
   <div
-    className={`w-full aspect-[16/9] rounded-[20px] overflow-hidden relative group ${
+    className={`w-full aspect-[19/12] rounded-[20px] overflow-hidden relative group ${
       !isModal ? "data-aos='zoom-in'" : ""
     }`}
     data-aos-delay={400 + index * 100}
   >
-    <a
-      href={project.url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      href={`/projects/${project.title.toLowerCase().replace(/\s+/g, "-")}`}
       className="block w-full h-full"
     >
       <div className="w-full h-full relative">
@@ -86,12 +85,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               {project.title}
             </h3>
             <span className="text-blue-400 text-sm group-hover:text-blue-300">
-              View Project →
+              View Details →
             </span>
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   </div>
 );
 
