@@ -34,14 +34,12 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className="fixed container z-20 px-[20px] lg:px-[130px] py-[25px] w-full bg-primary-black"
+        className="fixed container z-20 px-[20px] lg:px-[130px] py-[25px] w-full bg-black/90 backdrop-blur-sm border-b border-white/10"
         data-aos="fade-down"
         data-aos-delay="300"
       >
-        <div className="flex justify-between items-center">
-          <div className="text-secondary-gray font-bold text-[25px]">
-            Khaaisnt.
-          </div>
+        <div className="flex justify-between items-center max-w-7xl mx-auto">
+          <div className="text-white font-bold text-[25px]">Khaaisnt.</div>
           <div className="block lg:hidden">
             <button
               id="hamburger"
@@ -50,17 +48,19 @@ const Navbar: React.FC = () => {
               className={`block relative z-30 ${isMenuOpen ? "open" : ""}`}
               onClick={toggleMenu}
             >
-              <span className="hamburger-line"></span>
-              <span className="hamburger-line"></span>
-              <span className="hamburger-line"></span>
+              <span className="hamburger-line bg-white"></span>
+              <span className="hamburger-line bg-white"></span>
+              <span className="hamburger-line bg-white"></span>
             </button>
           </div>
-          <div className="font-medium hidden lg:flex">
+          <div className="font-medium hidden lg:flex items-center gap-x-8">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="mx-[12px] text-[16px] text-secondary-gray hover:text-white duration-200"
+                className="relative text-white text-[16px] font-medium hover:text-blue-400 transition-colors duration-300 
+                after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:-bottom-1 
+                after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                 target={link.href.startsWith("http") ? "_blank" : "_self"}
               >
                 {link.title}
@@ -70,16 +70,18 @@ const Navbar: React.FC = () => {
         </div>
         {isMenuOpen && (
           <div
-            className="lg:hidden absolute top-full left-0 w-full bg-primary-black transition-transform duration-300 ease-in-out"
+            className="lg:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-sm border-b border-white/10"
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <div className="flex flex-col items-center justify-center py-4">
+            <div className="flex flex-col items-center justify-center py-6 gap-y-6">
               {links.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-[16px] text-secondary-gray font-medium hover:text-white duration-200 mb-4"
+                  className="relative text-white text-[18px] font-medium hover:text-blue-400 transition-colors duration-300 
+                  after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-blue-400 after:left-0 after:-bottom-1 
+                  after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                   onClick={toggleMenu}
                   target={link.href.startsWith("http") ? "_blank" : "_self"}
                 >
@@ -96,9 +98,8 @@ const Navbar: React.FC = () => {
           width: 25px;
           height: 2px;
           margin: 5px auto;
-          background-color: #fff;
           transition: all 0.3s ease-in-out;
-          radius: 15px;
+          border-radius: 4px;
         }
         #hamburger.open .hamburger-line:nth-child(1) {
           transform: translateY(7px) rotate(45deg);

@@ -49,18 +49,17 @@ const allProjectData: Project[] = [
     url: "https://zdevloper.vercel.app/",
   },
   {
-    title: "Netflix Clone Love",
-    image: Beloved,
-    url: "https://beloved-ona.vercel.app/",
-  },
-  {
     title: "Gado-Gado Kaliurang",
     image: Kaliurang,
     url: "https://gadogadokaliurang.vercel.app/",
   },
 ];
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isModal = false }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  project,
+  index,
+  isModal = false,
+}) => (
   <div
     className={`w-full aspect-[16/9] rounded-[20px] overflow-hidden relative group ${
       !isModal ? "data-aos='zoom-in'" : ""
@@ -81,10 +80,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isModal = fal
           objectFit="cover"
           className="transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center gap-4">
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-colors duration-300 flex items-center justify-center gap-4">
           <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 text-center">
-            <h3 className="text-white text-2xl font-bold mb-2">{project.title}</h3>
-            <span className="text-white text-sm hover:underline">View Project</span>
+            <h3 className="text-white text-2xl font-bold mb-2">
+              {project.title}
+            </h3>
+            <span className="text-blue-400 text-sm group-hover:text-blue-300">
+              View Project →
+            </span>
           </div>
         </div>
       </div>
@@ -96,19 +99,19 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/60 z-50 overflow-y-auto">
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 overflow-y-auto">
       <div className="min-h-screen px-4 flex items-center justify-center">
-        <div className="bg-gray-200/80 rounded-2xl w-full max-w-6xl p-6 relative">
+        <div className="bg-black/95 rounded-2xl w-full max-w-6xl p-8 relative border border-white/10">
           <button
             onClick={onClose}
-            className="absolute right-6 top-6 text-gray-700 hover:text-gray-800 transition-colors"
+            className="absolute right-6 top-6 text-white/60 hover:text-white transition-colors"
           >
             <X size={24} />
           </button>
-          
-          <h2 className="text-2xl font-bold mb-6">All Projects</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-h-[70vh] overflow-y-auto pr-2">
+
+          <h2 className="text-2xl font-bold mb-8 text-white">All Projects</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-h-[70vh] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-white/10">
             {allProjectData.map((project, index) => (
               <ProjectCard
                 key={project.title}
@@ -138,12 +141,18 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <section className="px-5 lg:px-32 w-full py-12 lg:py-16" id="projects">
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-secondary-gray text-xl">Projects</h2>
+    <section
+      className="px-5 lg:px-32 w-full py-16 lg:py-24 bg-black"
+      id="projects"
+    >
+      <div className="flex justify-between items-center mb-12">
+        <h2 className="text-secondary-gray text-xl font-medium">Projects</h2>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="text-white hover:text-blue-600 hover:underline font-medium transition-colors"
+          className="text-white hover:text-blue-400 transition-colors duration-300 
+          relative after:content-[''] after:absolute after:w-full after:h-[2px] 
+          after:bg-blue-400 after:left-0 after:-bottom-1 after:scale-x-0 
+          hover:after:scale-x-100 after:transition-transform after:duration-300"
         >
           View More Projects
         </button>
@@ -155,7 +164,10 @@ const Projects: React.FC = () => {
         ))}
       </div>
 
-      <ProjectModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
