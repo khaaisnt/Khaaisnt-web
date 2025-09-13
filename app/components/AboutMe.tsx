@@ -56,7 +56,7 @@ export default function AboutMe() {
         </div>
 
         {/* Social links */}
-        <div className="py-[60px]">
+        <div className="pt-[60px]">
           <h4 className="text-secondary-gray text-[20px] font-medium mb-4">
             Connect
           </h4>

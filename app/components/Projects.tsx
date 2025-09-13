@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import LansiCare from "/public/LansiCareSection.png";
-import Wastain from "/public/WastainSection.png";
 import Pilketos from "/public/E-Pilketos.png";
-import Beloved from "/public/BelovedOna.png";
-import ZDev from "/public/ZDev.png";
-import Kaliurang from "/public/GadoKaliurang.png";
+import ICH from "/public/cover-ich.png";
+import GTK from "/public/cover-gtk.png";
+import IDL from "/public/cover-idl.png";
 import { X } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -30,14 +29,19 @@ interface ProjectModalProps {
 
 const allProjectData: Project[] = [
   {
-    title: "LansiCare",
-    image: LansiCare,
-    url: "https://lansicare-health.vercel.app/homepage",
+    title: "Indonesia Digital Learning",
+    image: IDL,
+    url: "https://indonesiadigitallearning.id/",
   },
   {
-    title: "Wastain",
-    image: Wastain,
-    url: "https://wastain.vercel.app/homepage",
+    title: "Digital Educator Expert",
+    image: GTK,
+    url: "https://gtk.indonesiadigitallearning.id/",
+  },
+  {
+    title: "Indonesia Cyber Heroes",
+    image: ICH,
+    url: "https://cyber.telkomcyberheroes.id/",
   },
   {
     title: "E-Pilketos Moklet",
@@ -45,14 +49,9 @@ const allProjectData: Project[] = [
     url: "https://e-pilketos.moklet.org/",
   },
   {
-    title: "ZDev",
-    image: ZDev,
-    url: "https://zdevloper.vercel.app/",
-  },
-  {
-    title: "Gado-Gado Kaliurang",
-    image: Kaliurang,
-    url: "https://gadogadokaliurang.vercel.app/",
+    title: "LansiCare Website",
+    image: LansiCare,
+    url: "https://lansicare-health.vercel.app/homepage",
   },
 ];
 
@@ -68,7 +67,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     data-aos-delay={400 + index * 100}
   >
     <Link
-      href={`/projects/${project.title.toLowerCase().replace(/\s+/g, "-")}`}
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
       className="block w-full h-full"
     >
       <div className="w-full h-full relative">
@@ -81,7 +82,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-colors duration-300 flex items-center justify-center gap-4">
           <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 text-center">
-            <h3 className="text-white text-2xl font-bold mb-2">
+            <h3 className="text-white text-2xl font-semibold mb-2">
               {project.title}
             </h3>
             <span className="text-blue-400 text-sm group-hover:text-blue-300">

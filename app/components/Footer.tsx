@@ -53,13 +53,12 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Credits & Update Info */}
           <div className="space-y-2">
             <p className="text-white/40 text-[14px]">
               Made by Rakha Adrian.
             </p>
             <p className="text-white/40 text-[14px]">
-              Last Updated: Feb 5, 2025
+              Last Updated: Sep 13, 2025
             </p>
           </div>
         </div>
